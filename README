@@ -1,8 +1,7 @@
-# Efficient Parallelization of Heat Distribution Simulation
+**Efficient Parallelization of Heat Distribution Simulation**
 
 In this project, we have learned about how to efficiently parallelize heat distribution simulation on a supercomputer. We have parallelized the code starting from vectorization, multithreading using OpenMP, to distributed computing using MPI. We have also learned about profiling tools such as PAPI and VTune. Sequential optimization has also been discussed such as cache optimizations to bring out the full potential of the system. In total, we have went from approximately 1000MFlop/s all the way to 400,000MFlop/s using the aforementioned optimization and parallelization techniques.
 
-# Efficient Parallelization of Recursive Abalone Game Search Strategy
+**Efficient Parallelization of Recursive Abalone Game Search Strategy**
 
-In this project, we have optimized and parallelized a search algorithm that is not very straighforward to parallelize, the Abalone game. As the underlying algorithm, the minimax
-algorithm with alpha-beta pruning has been used. OpenMP parallel for-loop has been used to parallelize the top layer of the search tree as we had one shared-memory node on a supercomputer to work with. We had to carefully balance and care about the algorithmic optimizations, load balancing, data races, and the Non-uniform memory access (NUMA) issues. We have obtained approximately 20 times speedup using 48 cores, and successfully participated in the tournament of abalone game with a score of 2 wins, 1 tie and 1 loss.
+In this project, we have optimized and parallelized a search algorithm that is not very straighforward to parallelize, the Abalone game. As the underlying algorithm, the minimax algorithm with alpha-beta pruning has been used. OpenMP parallel for-loop has been used to parallelize the top layer of the search tree as we had one shared-memory node on a supercomputer to work with. We had to carefully balance and care about the algorithmic optimizations, load balancing, data races, and the Non-uniform memory access (NUMA) issues. We have obtained approximately 20 times speedup using 48 cores, and successfully participated in the tournament of abalone game with a score of 2 wins, 1 tie and 1 loss.

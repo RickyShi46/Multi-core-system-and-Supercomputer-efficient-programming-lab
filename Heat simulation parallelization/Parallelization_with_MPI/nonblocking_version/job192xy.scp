@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#SBATCH -J heat
+
+#SBATCH -o job192xy.out
+#SBATCH -e job192xy.out
+
+#SBATCH --time=00:01:00
+#SBATCH --account=h039v
+#SBATCH --partition=test
+#Number of nodes and MPI tasks per node:
+#SBATCH --nodes=4
+#SBATCH --ntasks=192
+#SBATCH --ntasks-per-node=48
+ 
+#Important
+module load papi
+module load slurm_setup
+ 
+#Run the program:
+mpiexec -n $SLURM_NTASKS ./heat test.dat -x 12 -y 16
+

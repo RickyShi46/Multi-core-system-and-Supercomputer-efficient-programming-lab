@@ -1,0 +1,8 @@
+To compile (no need to load any module):
+    make
+To run the code (use ./player -h to check which strategy is called "Minimax"):
+./player -s 1 -p 24000 O
+or
+./player -s 1 -p 25000 X
+
+No need to specify the depth as the depth is adaptive.

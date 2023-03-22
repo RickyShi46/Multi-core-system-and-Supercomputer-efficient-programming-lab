@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#SBATCH -J heat
+
+#SBATCH -o job.out
+#SBATCH -e job.out
+
+#SBATCH --time=00:01:00
+#SBATCH --account=h039v
+#SBATCH --partition=test
+
+export OMP_NUM_THREADS=1
+./heat test.dat
+
+export OMP_NUM_THREADS=2
+./heat test.dat
+
+export OMP_NUM_THREADS=4
+./heat test.dat
+
+export OMP_NUM_THREADS=8
+./heat test.dat
+
+export OMP_NUM_THREADS=12
+./heat test.dat
+
+export OMP_NUM_THREADS=16
+./heat test.dat
+
+export OMP_NUM_THREADS=24
+./heat test.dat
+
+export OMP_NUM_THREADS=32
+./heat test.dat
+
+export OMP_NUM_THREADS=48
+./heat test.dat
